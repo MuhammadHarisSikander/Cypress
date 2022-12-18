@@ -1,17 +1,14 @@
 /// <reference types="Cypress" />
 import Login from '../pageObject/login'
 
-describe("Fist test suite", ()=> {
-    it('Visit visit', () => {
+describe("LOGIN", () => {
+    it('Lgin with valid creds', () => {
         const login = new Login()
-        // cy.fixture('example').then(function(data) {
-        //     this.data = data
-        // })
-        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
-        login.getEmail().type('Admin')
-        login.getPassword().type('admin123')
+        cy.visit('https://qa-backoffice.petplannersoftware.com');
+        login.getEmail().type('stage.admin@petplannersoftware.com')
+        login.getPassword().type('gCLoU9LU')
         login.getSubmit().click()
     })
-    
+
 })
-  
+

@@ -1,13 +1,13 @@
 /// <reference types="Cypress" /> 
 class Login {
     getEmail() {
-        return cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input')
+        return cy.get(':nth-child(1) > .MuiInputBase-root > .MuiInputBase-input')
     }
     getPassword() {
-        return cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input')
+        return cy.get(':nth-child(2) > .MuiInputBase-root > .MuiInputBase-input')
     }
     getSubmit() {
-        return cy.get('.oxd-button')
+        return cy.get('.MuiButton-label')
     }
 }
 export default Login

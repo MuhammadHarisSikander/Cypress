@@ -1,3 +1,4 @@
+import Login from '../e2e/pageObject/login'
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -23,3 +24,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+
+Cypress.Commands.add('Login', (username, password) => {
+
+    const login = new Login()
+    cy.visit('https://qa-backoffice.petplannersoftware.com');
+    login.getEmail().type(username)
+    login.getPassword().type(password)
+    login.getSubmit().click()
+
+})

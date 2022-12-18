@@ -5,6 +5,7 @@ const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 
 module.exports = defineConfig({
+  projectId: '5ut2v7',
   e2e: {
     setupNodeEvents(on, config) {
       require('cypress-grep/src/plugin')(config)
@@ -13,7 +14,9 @@ module.exports = defineConfig({
     },
     env: {
       allureReuseAfterSpec: true
-    }
+    },
+    viewportWidth: 1536,
+    viewportHeight: 960
   },
 });
 
