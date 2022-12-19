@@ -1,5 +1,8 @@
 import './commands'
+import "cypress-localstorage-commands";
 import '@shelex/cypress-allure-plugin';
+import registerCypressGrep from '@cypress/grep'
+registerCypressGrep()
 require('@shelex/cypress-allure-plugin');
 require('cypress-grep')()
 // ***********************************************************
