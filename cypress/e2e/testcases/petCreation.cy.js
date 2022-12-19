@@ -13,7 +13,7 @@ describe("Create a pet", () => {
         PetCreate.getPetCreateBtn().click()
         cy.wait(1000)
         PetCreate.getPoNames().click().type('Haris sikk Sikander').click()
-        cy.wait(200)
+        cy.wait(2000)
         cy.get('#combo-box-demo-popup').click()
         PetCreate.getPetType().click()
         cy.get('.MuiList-root').click()
