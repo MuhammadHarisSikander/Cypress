@@ -8,54 +8,58 @@ describe("Create a pet", () => {
     })
     it('Pet creation Smoke test', () => {
         const PetCreate = new petCreate()
+        cy.wait(1000)
         PetCreate.getPetScreen().click()
         PetCreate.getPetCreateBtn().click()
-        cy.wait(200)
+        cy.wait(1000)
         PetCreate.getPoNames().click().type('Haris sikk Sikander').click()
         cy.wait(200)
         cy.get('#combo-box-demo-popup').click()
-        PetCreate.getPetGender().click()
+        PetCreate.getPetType().click()
         cy.get('.MuiList-root').click()
         PetCreate.getPetBreed().type('Cypress')
         PetCreate.getPetName().type('Cypress Dog')
         PetCreate.getPetDOB().click()
         PetCreate.getPetYear().click()
         cy.get('.MuiPickersYearSelection-container > :nth-child(122)').click()
-        // cy.get('.MuiPickersSlideTransition-transitionContainer > .MuiTypography-root').then((value) => {
-        //     console.log(value.text());
-        // })
-
-        const txt = ''
+        //Pet DOB condition
         cy.get('.MuiPickersSlideTransition-transitionContainer > .MuiTypography-root').then((val) => {
-            // cy.log(val.text())
-            // txt == val.text()
             if (val.text() !== 'January 2021') {
                 cy.get('.MuiPickersCalendarHeader-switchHeader > :nth-child(1) > .MuiIconButton-label > .MuiSvgIcon-root').dblclick()
                 cy.get('.MuiPickersCalendar-transitionContainer > :nth-child(1) > :nth-child(1) > :nth-child(6)').click
                 cy.get('.MuiDialogActions-root > :nth-child(2) > .MuiButton-label').click()
             }
-
         })
+        PetCreate.getPetGender().click()
+        PetCreate.getGenderSelect().click()
+        PetCreate.getPetWeight().type('200')
+        PetCreate.getPetColor().contains('Multi').click()
+        PetCreate.getOpenColorList().click()
+        cy.get('.MuiList-root > [tabindex="0"]').click()
+        cy.get('.MuiList-root > :nth-child(2)').click()
+        cy.get('body').type('{esc}')
+        cy.get(':nth-child(12) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root').type("My Pet is sweet")
+        cy.get(':nth-child(4) > :nth-child(2) > .MuiButtonBase-root').selectFile('cypress/img/dog.jpg')
+        cy.get(':nth-child(9) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root').type('Stressful')
+        cy.get(':nth-child(6) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root').type('Other pet')
+        cy.get('.jss998 > #stp1').click()
+        cy.wait(5000)
+        cy.get('.jss704 > .ps__rail-y').scrollIntoView({ offset: { top: 0, left: 0 } })
+        cy.wait(1000)
+        cy.get('[style="display: flex; justify-content: end;"] > div > .MuiButtonBase-root').click()
+        cy.wait(1000)
+        cy.get(':nth-child(14) > .MuiButtonBase-root').selectFile('cypress/img/dog.jpg')
+        cy.wait(1000)
+        cy.get('[style="display: flex; justify-content: end;"] > div > .MuiButtonBase-root').click()
+        cy.get(':nth-child(1) > :nth-child(3) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root').type("Please give some food")
+        cy.get('[style="display: flex; justify-content: end;"] > div > .MuiButtonBase-root').click()
+        cy.wait(2000)
+        cy.get('.MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('Cypress Dog {enter}')
+        cy.get(':nth-child(1) > .MuiTableCell-alignCenter').should('contain.text', 'Cypress Dog')
+        // cy.get('.jss704 > .ps__rail-y > .ps__thumb-y').scrollTo('top')
+        // cy.get('.jss704 > .ps__rail-y').scrollIntoView({ offset: { top: 150, left: 0 } })
+        // cy.get('[style="display: flex; justify-content: end;"] > div > .MuiButtonBase-root').click({ force: true })
 
-
-
-        // {
-        //     cy.get(':nth-child(1) > :nth-child(6) > .MuiButtonBase-root > .MuiIconButton-label').click()
-        //     cy.get('.MuiDialogActions-root > :nth-child(2)').click()
-
-        // }
-        // else {
-        //     cy.wait(2000)
-        //     return cy.get('.MuiPickersCalendarHeader-switchHeader > :nth-child(1) > .MuiIconButton-label > .MuiSvgIcon-root').click()
-        // }
-
-        // cy.get('.MuiAutocomplete-root > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root').select('Haris sikk Sikander')
-        // cy.get('.MuiAutocomplete-popupIndicator > .MuiIconButton-label > .MuiSvgIcon-root').click()
-        // PetCreate.getPoNames().type('Haris sikk Sikander {enter} ')
-        // cy.get('#combo-box-demo').click("Haris sikk Sikander")
-
-        // PetCreate.getPassword().type()
-        // PetCreate.getSubmit().click()
     })
 
 })

@@ -13,7 +13,8 @@ module.exports = defineConfig({
       return config;
     },
     env: {
-      allureReuseAfterSpec: true
+      allureReuseAfterSpec: true,
+      ensureScrollable: false
     },
     viewportWidth: 1536,
     viewportHeight: 960

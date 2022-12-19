@@ -9,7 +9,7 @@ class petCreate {
     getPoNames() {
         return cy.get('#combo-box-demo')
     }
-    getPetGender() {
+    getPetType() {
         return cy.get('#demo-controlled-open-select')
     }
     getPetBreed() {
@@ -24,14 +24,21 @@ class petCreate {
     getPetYear() {
         return cy.get(':nth-child(1) > .MuiButton-label > .MuiTypography-root')
     }
-    getNavigateBack() {
-        return cy.get('.MuiPickersCalendarHeader-switchHeader > :nth-child(1) > .MuiIconButton-label > .MuiSvgIcon-root')
+    getPetGender() {
+        return cy.get('#mui-component-select-gender')
     }
-    getNavigateForward() {
-        return cy.get(':nth-child(3) > .MuiIconButton-label > .MuiSvgIcon-root')
+    getGenderSelect() {
+        return cy.get('.MuiList-root > [tabindex="0"]')
     }
-    getMonthYear() {
-        return cy.get('.MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter')
+    getPetWeight() {
+        return cy.get('[style="margin: 20px 0px;"] > :nth-child(2) > .jss996')
     }
+    getPetColor() {
+        return cy.get('[style="margin-bottom: 5px;"] > .MuiFormGroup-root')
+    }
+    getOpenColorList() {
+        return cy.get('#mui-component-select-color')
+    }
+
 }
 export default petCreate
