@@ -18,7 +18,8 @@ module.exports = defineConfig({
     env: {
       experimentalSessionAndOrigin: true,
       // allureReuseAfterSpec: true,
-    }
+    },
+    baseUrl: "https://qa.appiskey.com/"
   },
 });
 
