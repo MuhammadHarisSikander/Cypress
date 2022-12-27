@@ -1,7 +1,7 @@
 ///<reference types="Cypress" />
 
 const dimensions = require("../dimensions");
-
+//hello there
 beforeEach(() => {
         cy.on('uncaught:exception', (err, runnable) => {
             return false
@@ -61,7 +61,7 @@ describe("Verify that user can visit the website and clicks on the lets connect,
         //Managed Services
         cy.get('.heading-1 > h1').scrollIntoView();
         cy.wait(3000);
-        cy.get(':nth-child(3) > .non-active-class > :nth-child(1)').invoke('show')
+        
         cy.get('#managed-services').click({force: true, multiple: true}); 
         cy.wait(3000);
         cy.go('back');
