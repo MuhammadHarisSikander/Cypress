@@ -13,6 +13,7 @@ describe("Verify that user can visit the website and clicks on the lets connect"
     it("Scrolling", () => {
         cy.viewport(key.viewportWidth, key.viewportHeight)
         cy.visit('https://qa.appiskey.com/');
+        cy.wait(3000)
 
       cy.contains('About Us').click({force: true, multiple: true});                            //click on about us
       cy.get('.banner > .container > .row').focus;
@@ -31,7 +32,7 @@ describe("Verify that user can visit the website and clicks on the lets connect"
       cy.wait(3000);
       })
 
-
+//Comment for comitt
 
     
   })
