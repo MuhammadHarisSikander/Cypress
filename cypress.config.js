@@ -13,7 +13,8 @@ module.exports = defineConfig({
     },
     env: {
       allureReuseAfterSpec: true
-    }
+    },
+    baseUrl: 'https://qa.appiskey.com/'
   },
 });
 
