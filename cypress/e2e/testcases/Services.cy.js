@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import data from './../../fixtures/data.json'
+import data from './../../fixtures/urls.json'
 
 var linkedinBtnElem=":nth-child(1) > .hover-class > .div-buttonn > .button"
 var rFPBtnElem =":nth-child(2) > .hover-class > .div-buttonn > .button"
@@ -12,20 +12,18 @@ const ProficiencesCards = [
     {elem : "#ProcessandWorkflow", heading: "Process And Workflow Automation", url:data['process-automated-service']},
     {elem : "#APIDevelopment", heading: "API Development and Integration", url:data['api-development-service']},
     {elem : "#InternetThings", heading: "Internet of Things - IoT Service", url:data['iot-service']},
-  ];
-//   const ConnectUs = [
-//     {elem :linkedinBtnElem,heading:"Linkedin", url: data['linkedin-url']},
-//     {elem :rFPBtnElem, heading: "Google Map", url:"/maps/place/"},
-//     {elem :officeUsBtnElem, heading: "Consulation Form"}
-//   ];
-
+  ]
 beforeEach(() => {
     cy.visit('/')
     cy.get('#navbarDropdown > :nth-child(1)').click()
     cy.get('a[href="/services/development-services.html"]').eq(1).click({force: true})
     
   })
-  
+  describe("Validate the redirection Development services page", () => {
+    it('Validating the redirection', () => {
+        cy.url().should('include', '/services/development-services.html')
+    })
+})
 describe("Validate the redirection to consulation form on Development services", () => {
     it('Verify if the user redirect to form when user click on Get started', () => {
         cy.get(':nth-child(5) > .btn-hvr').should('have.text',"Get Started").click({force:true})

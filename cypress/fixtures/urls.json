@@ -5,6 +5,8 @@
     "process-automated-service": "process-and-workflow-automation.html",
     "api-development-service": "api-development-and-Integration.html",
     "iot-service": "iot.html",
-    "linkedin-url":"linkedin.com/"
+    "linkedin-url":"linkedin.com/",
+    "baseUrl": "https://qa.appiskey.com/"
+    
     
 }
