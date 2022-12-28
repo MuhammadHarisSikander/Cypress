@@ -20,7 +20,7 @@ module.exports = defineConfig({
       // allureReuseAfterSpec: true,
     },
     baseUrl: 'https://qa.appiskey.com/',
-    "chromeWebSecurity": false
+    // "chromeWebSecurity": false
   },
 });
 
