@@ -5,6 +5,7 @@ const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 
 module.exports = defineConfig({
+  
   e2e: {
     setupNodeEvents(on, config) {
       require('cypress-grep/src/plugin')(config)
@@ -14,7 +15,8 @@ module.exports = defineConfig({
     env: {
       allureReuseAfterSpec: true
     },
-    baseUrl: 'https://qa.appiskey.com/'
+    baseUrl: 'https://qa.appiskey.com/',
+    "chromeWebSecurity":false
   },
 });
 
