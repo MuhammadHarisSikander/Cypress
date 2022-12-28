@@ -1,0 +1,70 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672262276132' stop='1672262276985'>
+    <name>Verify that user can visit the website and clicks on the lets connect,schedule an appointement,Discuss your app</name>
+    <title>Verify that user can visit the website and clicks on the lets connect,schedule an appointement,Discuss your app</title>
+    <test-cases>
+        <test-case start='1672262276133' status='broken' stop='1672262276391'>
+            <name>Scrolling</name>
+            <title>Scrolling</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>`cy.viewport()` can only accept a string preset or a `width` and `height` as numbers.
+                
+                https://on.cypress.io/viewport</message>
+                <stack-trace>CypressError: `cy.viewport()` can only accept a string preset or a `width` and `height` as numbers.
+                
+                https://on.cypress.io/viewport
+                    at throwErrBadArgs (https://qa.appiskey.com/__cypress/runner/cypress_runner.js:146765:85)
+                    at Context.viewport (https://qa.appiskey.com/__cypress/runner/cypress_runner.js:146841:9)
+                    at wrapped (https://qa.appiskey.com/__cypress/runner/cypress_runner.js:157498:43)
+                From Your Spec Code:
+                    at Context.eval (webpack:///./cypress/e2e/testcases/LetsConnect.cy.js:15:23)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1672262276461' status='broken' stop='1672262276698'>
+            <name>Scrolling</name>
+            <title>Scrolling</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>`cy.viewport()` can only accept a string preset or a `width` and `height` as numbers.
+                
+                https://on.cypress.io/viewport</message>
+                <stack-trace>CypressError: `cy.viewport()` can only accept a string preset or a `width` and `height` as numbers.
+                
+                https://on.cypress.io/viewport
+                    at throwErrBadArgs (https://qa.appiskey.com/__cypress/runner/cypress_runner.js:146765:85)
+                    at Context.viewport (https://qa.appiskey.com/__cypress/runner/cypress_runner.js:146841:9)
+                    at wrapped (https://qa.appiskey.com/__cypress/runner/cypress_runner.js:157498:43)
+                From Your Spec Code:
+                    at Context.eval (webpack:///./cypress/e2e/testcases/LetsConnect.cy.js:15:23)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1672262276700' status='broken' stop='1672262276951'>
+            <name>Scrolling</name>
+            <title>Scrolling</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>`cy.viewport()` can only accept a string preset or a `width` and `height` as numbers.
+                
+                https://on.cypress.io/viewport</message>
+                <stack-trace>CypressError: `cy.viewport()` can only accept a string preset or a `width` and `height` as numbers.
+                
+                https://on.cypress.io/viewport
+                    at throwErrBadArgs (https://qa.appiskey.com/__cypress/runner/cypress_runner.js:146765:85)
+                    at Context.viewport (https://qa.appiskey.com/__cypress/runner/cypress_runner.js:146841:9)
+                    at wrapped (https://qa.appiskey.com/__cypress/runner/cypress_runner.js:157498:43)
+                From Your Spec Code:
+                    at Context.eval (webpack:///./cypress/e2e/testcases/LetsConnect.cy.js:15:23)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

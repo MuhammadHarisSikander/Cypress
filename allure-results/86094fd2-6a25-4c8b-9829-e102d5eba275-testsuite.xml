@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672266134910' stop='1672266138250'>
+    <name>Validate the redirection to consulation form on Development services</name>
+    <title>Validate the redirection to consulation form on Development services</title>
+    <test-cases>
+        <test-case start='1672266134911' status='passed' stop='1672266136015'>
+            <name>Verify if the user redirect to form when user click on Get started</name>
+            <title>Verify if the user redirect to form when user click on Get started</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672266136021' status='passed' stop='1672266137147'>
+            <name>Verify if the user redirect to form when user click on Let connect</name>
+            <title>Verify if the user redirect to form when user click on Let connect</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672266137159' status='passed' stop='1672266138243'>
+            <name>Verify if the user redirect to form when user click on Schedule Meeting</name>
+            <title>Verify if the user redirect to form when user click on Schedule Meeting</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

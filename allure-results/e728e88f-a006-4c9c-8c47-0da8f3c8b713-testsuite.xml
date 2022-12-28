@@ -1,0 +1,57 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672266013196' stop='1672266032917'>
+    <name>Validate Contact with US cards Redirection</name>
+    <title>Validate Contact with US cards Redirection</title>
+    <test-cases>
+        <test-case start='1672266013196' status='failed' stop='1672266020091'>
+            <name>Verify if the user redirect to linkedin</name>
+            <title>Verify if the user redirect to linkedin</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Timed out retrying after 4000ms: expected '' to include 'company/appiskey/'
+                
+                The command was expected to run against origin `https://qa.appiskey.com` but the application is at origin `https://www.linkedin.com`.
+                
+                This commonly happens when you have either not navigated to the expected origin or have navigated away unexpectedly.</message>
+                <stack-trace>AssertionError: Timed out retrying after 4000ms: expected '' to include 'company/appiskey/'
+                
+                The command was expected to run against origin `https://qa.appiskey.com` but the application is at origin `https://www.linkedin.com`.
+                
+                This commonly happens when you have either not navigated to the expected origin or have navigated away unexpectedly.
+                    at Context.eval (webpack:///./cypress/e2e/testcases/Services.cy.js:65:17)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1672266020226' status='passed' stop='1672266022149'>
+            <name>Verify if the user redirect to form</name>
+            <title>Verify if the user redirect to form</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672266022189' status='failed' stop='1672266032762'>
+            <name>Verify if the user redirect to google map</name>
+            <title>Verify if the user redirect to google map</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Timed out retrying after 4000ms: expected '' to include '/maps/place/219+N+Brown+Ave,+Orlando,+FL+32801,+USA'
+                
+                The command was expected to run against origin `https://qa.appiskey.com` but the application is at origin `https://www.google.com`.
+                
+                This commonly happens when you have either not navigated to the expected origin or have navigated away unexpectedly.</message>
+                <stack-trace>AssertionError: Timed out retrying after 4000ms: expected '' to include '/maps/place/219+N+Brown+Ave,+Orlando,+FL+32801,+USA'
+                
+                The command was expected to run against origin `https://qa.appiskey.com` but the application is at origin `https://www.google.com`.
+                
+                This commonly happens when you have either not navigated to the expected origin or have navigated away unexpectedly.
+                    at Context.eval (webpack:///./cypress/e2e/testcases/Services.cy.js:74:17)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

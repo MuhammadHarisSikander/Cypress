@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 import dimensions, { mobile } from '../../support/dimensions'
-import data from './../../fixtures/urls.json'
+import data from '../../fixtures/urls.json'
 
 var linkedinBtnElem = ":nth-child(1) > .hover-class > .div-buttonn > .button"
 var rFPBtnElem = ":nth-child(2) > .hover-class > .div-buttonn > .button"
@@ -60,20 +60,20 @@ describe("Validate Proficiences Cards Redirection", () => {
 })
 describe("Validate Contact with US cards Redirection", () => {
 
-    it('Verify if the user redirect to linkedin', () => {
-        cy.get(linkedinBtnElem).should('have.text', " Follow Appiskey ").invoke('removeAttr', 'target').click({ force: true })
-        cy.url().should('include', 'company/appiskey/')
-    })
-    it('Verify if the user redirect to form', () => {
-        cy.get(rFPBtnElem).should('have.text', " Submit Now ").click({ force: true })
-        cy.get(formSectionElem).should('be.visible')
+    // it('Verify if the user redirect to linkedin', () => {
+    //     cy.get(linkedinBtnElem).should('have.text', " Follow Appiskey ").invoke('removeAttr', 'target').click({ force: true })
+    //     cy.url().should('include', 'company/appiskey/')
+    // })
+    // it('Verify if the user redirect to form', () => {
+    //     cy.get(rFPBtnElem).should('have.text', " Submit Now ").click({ force: true })
+    //     cy.get(formSectionElem).should('be.visible')
 
-    })
-    it('Verify if the user redirect to google map', () => {
-        cy.get(officeUsBtnElem).should('have.text', " US Office Location ").invoke('removeAttr', 'target').click({ force: true })
-        cy.url().should('include', '/maps/place/219+N+Brown+Ave,+Orlando,+FL+32801,+USA')
+    // })
+    // it('Verify if the user redirect to google map', () => {
+    //     cy.get(officeUsBtnElem).should('have.text', " US Office Location ").invoke('removeAttr', 'target').click({ force: true })
+    //     cy.url().should('include', '/maps/place/219+N+Brown+Ave,+Orlando,+FL+32801,+USA')
 
-    })
+    // })
 })
 
 describe("Validate case study redirection", () => {
@@ -126,9 +126,7 @@ describe("Checking page responsiveness", () => {
             cy.get('#navbarText').should('be.visible')
             cy.scrollTo('bottom').window().its('scrollY').should('not.equal', 0);
             cy.scrollTo('right').window().its('scrollX').should('equal', 0);
-
         })
     })
-
 })
 

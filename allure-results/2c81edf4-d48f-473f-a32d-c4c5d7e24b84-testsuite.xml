@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672270604507' stop='1672270670128'>
+    <name>Verify that user can visit the website and clicks on the lets connect</name>
+    <title>Verify that user can visit the website and clicks on the lets connect</title>
+    <test-cases>
+        <test-case start='1672270604508' status='passed' stop='1672270631377'>
+            <name>Scrolling</name>
+            <title>Scrolling</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672270631452' status='passed' stop='1672270650905'>
+            <name>Scrolling</name>
+            <title>Scrolling</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672270650962' status='passed' stop='1672270670127'>
+            <name>Scrolling</name>
+            <title>Scrolling</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672267321304' stop='1672267325482'>
+    <name>Validate the redirection Development services page</name>
+    <title>Validate the redirection Development services page</title>
+    <test-cases>
+        <test-case start='1672267321304' status='passed' stop='1672267325463'>
+            <name>Validating the redirection</name>
+            <title>Validating the redirection</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
