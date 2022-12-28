@@ -19,7 +19,8 @@ module.exports = defineConfig({
       experimentalSessionAndOrigin: true,
       // allureReuseAfterSpec: true,
     },
-    baseUrl: "https://qa.appiskey.com/"
+    baseUrl: 'https://qa.appiskey.com/',
+    "chromeWebSecurity": false
   },
 });
 
