@@ -1,16 +1,15 @@
 /// <reference types="Cypress" />
 
-import dimensions, { mobile } from '../../support/dimensions'
-import data from './../../fixtures/urls.json'
+import dimensions, { mobile } from '../../../support/dimensions'
+import data from '../../../fixtures/urls.json'
 
 var linkedinBtnElem=":nth-child(1) > .hover-class > .div-buttonn > .button"
 var rFPBtnElem =":nth-child(2) > .hover-class > .div-buttonn > .button"
 var officeUsBtnElem=":nth-child(3) > .hover-class > .div-buttonn > .button"
 var formSectionElem="#form-section"
-var caseStudyElem="#readcasestudyScout"
 var servicesNavElem="#navbarDropdown > :nth-child(1)"
 var serviceUrlElem='a[href="/services/development-services.html"]'
-var connectBtnElem="#connect"
+var connectBtnElem="#lets-connect"
 var startBtnElem="#get-started"
 var meetingBtnElem=".div-button > .btn-hvr"
 var headingElem=".text-side > :nth-child(1) > h2"
@@ -29,12 +28,12 @@ beforeEach(() => {
     cy.get(serviceUrlElem).eq(1).click({force: true})
     
   })
-  describe("Validate the redirection Development services page", () => {
-    it('Validating the redirection', () => {
-        cy.url().should('include', '/services/development-services.html')
-    })
-})
-describe("Validate the redirection to consulation form on Development services", () => {
+   describe("Validate the redirection Development services page", () => {
+     it('Validating the redirection', () => {
+         cy.url().should('include', '/services/development-services.html')
+     })
+ })
+ describe("Validate the redirection to consulation form on Development services", () => {
     it('Verify if the user redirect to form when user click on Get started', () => {
         cy.get(startBtnElem).should('have.text',"Get Started").click({force:true})
         cy.get(formSectionElem).should('be.visible')
@@ -48,8 +47,8 @@ describe("Validate the redirection to consulation form on Development services",
         cy.get(formSectionElem).should('be.visible')
     })
 
-})
-describe("Validate Proficiences Cards Redirection", () => {
+ })
+ describe("Validate Proficiences Cards Redirection", () => {
     ProficiencesCards.forEach((value, key) => {
         it('Verify if the user redirect to'+ ' ' + value.heading, () => {
             cy.get(value.elem).click({force:true})
@@ -57,7 +56,7 @@ describe("Validate Proficiences Cards Redirection", () => {
             cy.get(headingElem).should('have.text',value.heading)
         })
       });
-})
+ })
 describe("Validate Contact with US cards Redirection", () => {
 
     it('Verify if the user redirect to linkedin', () => {
@@ -75,26 +74,20 @@ describe("Validate Contact with US cards Redirection", () => {
        
     })
 })
-
 describe("Validate case study redirection", () => {
-it('Verify if the user redirect to the case studey of scout project', () => {
-    cy.xpath('//*[@id="slick-slide00"]/div/div/div/div[3]/h2').should('have.text','Scout').if('visible').then(() => {
-    cy.get('#readcasestudyScout').if('visible').then(() => {}).click({force:true})
-    cy.get('.color').should('have.text','SCOUT') })
-      
+it('Verify if the user redirect to the case study of scout project', () => {
+    cy.get('#readcasestudyScout', { timeout: 10_000 }).should('be.visible').click({force:true})
+    cy.get('.color').should('have.text','SCOUT')
 })
-it('Verify if the user redirect to the case studey of Gym Hub project', () => {
-    cy.xpath('//*[@id="slick-slide01"]/div/div/div/div[3]/h2').should('have.text','Gym Hub').if('visible').then(() => {
-    cy.get('#readcasestudygymhub').if('visible').then(() => {}).click({force:true})
-    cy.get('.color').should('have.text','GYM HUB')})    
-  })
-it('Verify if the user redirect to the case studey of pet project', () => {
-    cy.xpath('//*[@id="slick-slide02"]/div/div/div/div[3]/h2').should('have.text','Pet Planner').if('visible').then(() => {
-    cy.get('#readcasestudypet').if('visible').then(() => {}).click({force:true})
-    cy.get('.color').should('have.text','PET PLANNER') })   
-  })
+it('Verify if the user redirect to the case study of Gym Hub project', () => {
+    cy.get('#readcasestudygymhub', { timeout: 10_000 }).should('be.visible').click({force:true})
+    cy.get('.color').should('have.text','GYMHUB')
 })
-    
+it('Verify if the user redirect to the case study of pet project', () => {
+    cy.get('#readcasestudypet' , { timeout: 10_000 }).should('be.visible').click({force:true})
+    cy.get('.color').should('have.text','Pet Planner')
+})
+})
 describe("Checking page responsiveness", () => {
     Object.values(dimensions.mobile).map((key,i)=>{
         it('Validating responsiveness on'+ ' ' + key.viewportWidth +'x'+ key.viewportHeight, () => {
@@ -122,8 +115,7 @@ describe("Checking page responsiveness", () => {
             cy.get('.container > :nth-child(2)').should('not.be.visible')
             cy.get('#navbarText').should('be.visible')
             cy.scrollTo('bottom').window().its('scrollY').should('not.equal', 0);
-            cy.scrollTo('right').window().its('scrollX').should('equal', 0);
-           
+            cy.scrollTo('right').window().its('scrollX').should('equal', 0)
          })
     })
 
