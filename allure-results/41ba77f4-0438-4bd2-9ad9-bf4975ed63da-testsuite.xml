@@ -1,0 +1,55 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672266796934' stop='1672266804880'>
+    <name>Checking page responsiveness</name>
+    <title>Checking page responsiveness</title>
+    <test-cases>
+        <test-case start='1672266796934' status='passed' stop='1672266798280'>
+            <name>Validating responsiveness on 360x800</name>
+            <title>Validating responsiveness on 360x800</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672266798332' status='passed' stop='1672266799796'>
+            <name>Validating responsiveness on 412x869</name>
+            <title>Validating responsiveness on 412x869</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672266799848' status='passed' stop='1672266801249'>
+            <name>Validating responsiveness on 414x736</name>
+            <title>Validating responsiveness on 414x736</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672266801269' status='passed' stop='1672266802610'>
+            <name>Validating responsiveness on 768x1024</name>
+            <title>Validating responsiveness on 768x1024</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672266802666' status='passed' stop='1672266803742'>
+            <name>Validating responsiveness on 1920x1080</name>
+            <title>Validating responsiveness on 1920x1080</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672266803799' status='passed' stop='1672266804879'>
+            <name>Validating responsiveness on 1366x768</name>
+            <title>Validating responsiveness on 1366x768</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672268434595' stop='1672268440900'>
+    <name>Validate case study redirection</name>
+    <title>Validate case study redirection</title>
+    <test-cases>
+        <test-case start='1672268434596' status='passed' stop='1672268438685'>
+            <name>Verify if the user redirect to the case studey of scout project</name>
+            <title>Verify if the user redirect to the case studey of scout project</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672268438707' status='passed' stop='1672268439849'>
+            <name>Verify if the user redirect to the case studey of Gym Hub project</name>
+            <title>Verify if the user redirect to the case studey of Gym Hub project</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672268439861' status='passed' stop='1672268440892'>
+            <name>Verify if the user redirect to the case studey of pet project</name>
+            <title>Verify if the user redirect to the case studey of pet project</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,55 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672267328818' stop='1672267339699'>
+    <name>Validate Proficiences Cards Redirection</name>
+    <title>Validate Proficiences Cards Redirection</title>
+    <test-cases>
+        <test-case start='1672267328819' status='passed' stop='1672267330501'>
+            <name>Verify if the user redirect to Custom Software Development</name>
+            <title>Verify if the user redirect to Custom Software Development</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672267330510' status='passed' stop='1672267332625'>
+            <name>Verify if the user redirect to ERP Development Service</name>
+            <title>Verify if the user redirect to ERP Development Service</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672267332646' status='passed' stop='1672267334422'>
+            <name>Verify if the user redirect to Mobile App Development</name>
+            <title>Verify if the user redirect to Mobile App Development</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672267334439' status='passed' stop='1672267335996'>
+            <name>Verify if the user redirect to Process And Workflow Automation</name>
+            <title>Verify if the user redirect to Process And Workflow Automation</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672267336005' status='passed' stop='1672267338112'>
+            <name>Verify if the user redirect to API Development and Integration</name>
+            <title>Verify if the user redirect to API Development and Integration</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672267338135' status='passed' stop='1672267339689'>
+            <name>Verify if the user redirect to Internet of Things - IoT Service</name>
+            <title>Verify if the user redirect to Internet of Things - IoT Service</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
