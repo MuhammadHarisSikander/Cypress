@@ -1,7 +1,7 @@
 /// <reference types="Cypress" /> 
 class petCreate {
     getPetScreen() {
-        return cy.get('.jss900 > .MuiListItemText-root-874 > .MuiTypography-root-808')
+        return cy.xpath('//*[@id="fuse-navbar"]/div/div/div/ul/a[3]')
     }
     getPetCreateBtn() {
         return cy.get('.MuiButton-label')
@@ -13,7 +13,7 @@ class petCreate {
         return cy.get('#demo-controlled-open-select')
     }
     getPetBreed() {
-        return cy.get(':nth-child(4) > :nth-child(2) > .jss996')
+        return cy.get(':nth-child(4) > :nth-child(2) > .jss996') || cy.get(':nth-child(4) > :nth-child(2) > .jss940')
     }
     getPetName() {
         return cy.get(':nth-child(5) > :nth-child(2) > .jss996')
@@ -69,7 +69,7 @@ class petCreate {
         return cy.get(':nth-child(8) > :nth-child(8)')
     }
     getPetStress() {
-        return cy.get(':nth-child(10) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
+        return cy.get(':nth-child(9) > :nth-child(2) > :nth-child(2) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
     }
     //Strangers Stats
     getPetReactToStranger() {

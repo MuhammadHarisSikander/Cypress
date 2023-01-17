@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "cypress": "^10.10.0"
-  },
   "scripts": {
     "cypress:open": "cypress open",
     "cy:open": "npx cypress open --env allure=true --browser chrome",
@@ -12,7 +9,9 @@
     "test": "npm run cy:run && npm run allure:report && allure serve "
   },
   "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
     "@shelex/cypress-allure-plugin": "^2.33.0",
+    "cypress": "^12.3.0",
     "cypress-grep": "^3.0.3"
   }
 }

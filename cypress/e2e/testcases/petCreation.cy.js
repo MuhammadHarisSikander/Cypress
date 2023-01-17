@@ -1,10 +1,11 @@
 /// <reference types="Cypress" />
+const dayjs = require('dayjs')
 import petCreate from '../pageObject/petCreation'
 
 describe("Create a pet", () => {
     beforeEach(() => {
         // cy.wait(2000)
-        cy.Login('stage.admin@petplannersoftware.com', 'gCLoU9LU')
+        cy.Login('stagging.admin@yopmail.com', 'jQq0CRHn')
     })
     it('Pet creation Smoke test', {
         retries: {
@@ -17,25 +18,30 @@ describe("Create a pet", () => {
         PetCreate.getPetScreen().click()
         PetCreate.getPetCreateBtn().click()
         cy.wait(1000)
-        PetCreate.getPoNames().click().type('Cypress Tester').click()
+        PetCreate.getPoNames().click().type('Haris sikk Sikander').click()
         cy.wait(2000)
         cy.get('#combo-box-demo-popup').click()
         PetCreate.getPetType().click()
         cy.get('.MuiList-root').click()
-        PetCreate.getPetBreed().type('Cypress')
+        if(cy.get(':nth-child(4) > :nth-child(2) > .jss996')){
+            cy.get(':nth-child(4) > :nth-child(2) > .jss996').click({force:true}).type('Cypress')
+        }else{
+            cy.get(':nth-child(4) > :nth-child(2) > .jss940').click({force:true}).type('Cypress')
+        }
+        // PetCreate.getPetBreed().click({force:true}).type('Cypress')
         PetCreate.getPetName().type('Cypress Tester Dog')
-        PetCreate.getPetDOB().click()
-        PetCreate.getPetYear().click()
-        cy.get('.MuiPickersYearSelection-container > :nth-child(122)').click()
-
+        // PetCreate.getPetDOB().click()
+        // PetCreate.getPetYear().click()
+        // cy.get('.MuiPickersYearSelection-container > :nth-child(122)').click()
+        cy.get(':nth-child(6) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type(dayjs().format('YYYY-MM-DD'))
         //Pet DOB condition
-        cy.get('.MuiPickersSlideTransition-transitionContainer > .MuiTypography-root').then((val) => {
-            if (val.text() !== 'January 2021') {
-                cy.get('.MuiPickersCalendarHeader-switchHeader > :nth-child(1) > .MuiIconButton-label > .MuiSvgIcon-root').dblclick()
-                cy.get('.MuiPickersCalendar-transitionContainer > :nth-child(1) > :nth-child(1) > :nth-child(6)').click
-                cy.get('.MuiDialogActions-root > :nth-child(2) > .MuiButton-label').click()
-            }
-        })
+        // cy.get('.MuiPickersSlideTransition-transitionContainer > .MuiTypography-root').then((val) => {
+        //     if (val.text() !== 'January 2021') {
+        //         cy.get('.MuiPickersCalendarHeader-switchHeader > :nth-child(1) > .MuiIconButton-label > .MuiSvgIcon-root').dblclick()
+        //         cy.get('.MuiPickersCalendar-transitionContainer > :nth-child(1) > :nth-child(1) > :nth-child(6)').click
+        //         cy.get('.MuiDialogActions-root > :nth-child(2) > .MuiButton-label').click()
+        //     }
+        // })
         PetCreate.getPetGender().click()
         PetCreate.getGenderSelect().click()
         PetCreate.getPetWeight().type('200')
@@ -44,7 +50,7 @@ describe("Create a pet", () => {
         cy.get('.MuiList-root > [tabindex="0"]').click()
         cy.get('.MuiList-root > :nth-child(2)').click()
         cy.get('body').type('{esc}')
-        cy.get(':nth-child(12) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root').type("My Pet is sweet")
+        cy.xpath('//*[@id="fuse-layout"]/div/div/div[2]/div/div[3]/div[2]/div[2]/div/form/div[2]/div[11]/div/div[1]/div/div').type("My Pet is sweet")
         cy.get(':nth-child(4) > :nth-child(2) > .MuiButtonBase-root').selectFile('cypress/img/dog.jpg')
 
         //contact info
@@ -61,27 +67,27 @@ describe("Create a pet", () => {
         cy.get(':nth-child(3) > .MuiFormControlLabel-root').click()
         cy.get(':nth-child(4) > .MuiFormControlLabel-root').click()
         cy.get(':nth-child(5) > .MuiFormControlLabel-root').click()
-        cy.get(':nth-child(3) > :nth-child(6) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('Aggresive')
+        cy.get(':nth-child(1) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').click({force:true}).type('Aggresive')
 
         //Tempramented issue
         PetCreate.getPetTemperamented().contains('Yes').click()
-        cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputAdornment-root > .MuiButtonBase-root').click()
-        cy.get(':nth-child(3) > :nth-child(4) > .MuiButtonBase-root').click()
-        cy.get('.MuiDialogActions-root > :nth-child(2)').click()
+        cy.get(':nth-child(5) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type(dayjs().format('YYYY-MM-DD'))
+        // cy.get(':nth-child(3) > :nth-child(4) > .MuiButtonBase-root').click()
+        // cy.get('.MuiDialogActions-root > :nth-child(2)').click()
         cy.get(':nth-child(5) > :nth-child(2) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').clear().type('Cypress')
 
         //FireWork Issue
         PetCreate.getPetFireWork().contains('Yes').click()
-        cy.get(':nth-child(7) > :nth-child(1) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('Firework')
-        cy.get(':nth-child(7) > :nth-child(2) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('Calming Technique')
+        cy.get(':nth-child(7) > [style="justify-content: flex-end;"] > :nth-child(1) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('Firework')
+        cy.get(':nth-child(7) > :nth-child(2) > :nth-child(2) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('Calming Technique')
 
         //Anxiety Issue
         PetCreate.getPetAnexity().contains('Yes').click()
-        cy.get(':nth-child(9) > :nth-child(1) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('Anxiety Issue')
-        cy.get(':nth-child(9) > :nth-child(2) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('Anxiety Treatment')
-
+        cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('Anxiety Issue')
+        cy.get(':nth-child(9) > :nth-child(2) > :nth-child(2) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('Anxiety Treatment')
+        cy.get(':nth-child(8) > :nth-child(10) > :nth-child(2) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('stressful situations')
         //Stressful issue
-        PetCreate.getPetStress().type('Stressful')
+        // PetCreate.getPetStress().type('Stressful')
 
         //Stranger Stats
         PetCreate.getPetReactToStranger().contains('Yes').click()
@@ -90,7 +96,7 @@ describe("Create a pet", () => {
         cy.get(':nth-child(9) > :nth-child(3) > :nth-child(3) > .MuiFormControlLabel-root').click()
         cy.get(':nth-child(9) > :nth-child(3) > :nth-child(4) > .MuiFormControlLabel-root').click()
         cy.get(':nth-child(9) > :nth-child(3) > :nth-child(5) > .MuiFormControlLabel-root').click()
-        cy.get(':nth-child(9) > :nth-child(3) > :nth-child(6) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('React To Stranger')
+        cy.get(':nth-child(6) > :nth-child(2) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('React To Stranger')
 
         //Escape issue
         PetCreate.getPetEscape().contains('Yes').click()
@@ -98,14 +104,14 @@ describe("Create a pet", () => {
         cy.get(':nth-child(5) > :nth-child(2) > .MuiFormControlLabel-root').click()
         cy.get(':nth-child(5) > :nth-child(3) > .MuiFormControlLabel-root').click()
         cy.get(':nth-child(5) > :nth-child(4) > .MuiFormControlLabel-root').click()
-        cy.get(':nth-child(5) > :nth-child(5) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('escape ')
-        cy.get(':nth-child(5) > :nth-child(6) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('tactics')
+        cy.get(':nth-child(5) > :nth-child(2) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('escape ')
+        cy.get(':nth-child(5) > :nth-child(6) > :nth-child(2) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('tactics')
 
         //fed & play
         PetCreate.getPetFedSeparat().contains('Yes').click()
         PetCreate.getPetPlayWithOther().contains('Yes').click()
         PetCreate.getPetChew().contains('Yes').click()
-        cy.get(':nth-child(9) > :nth-child(10) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('Chew random object')
+        cy.get(':nth-child(9) > :nth-child(10) > :nth-child(2) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('Chew random object')
         PetCreate.getPetBoarded().contains('Yes').click()
 
         //Next Page
@@ -123,9 +129,9 @@ describe("Create a pet", () => {
         cy.wait(2000)
         cy.get('.MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('Cypress Dog {enter}')
         cy.get(':nth-child(1) > .MuiTableCell-alignCenter').should('contain.text', 'Cypress Dog')
-        cy.get('.jss704 > .ps__rail-y > .ps__thumb-y').scrollTo('top')
+        cy.get('.jss704 > .ps__rail-y > .ps__thumb-y').scrollTo('top',{ensureScrollable: false})
         cy.get('.jss704 > .ps__rail-y').scrollIntoView({ offset: { top: 150, left: 0 } })
-        cy.get('[style="display: flex; justify-content: end;"] > div > .MuiButtonBase-root').click({ force: true })
+        // cy.get('[style="display: flex; justify-content: end;"] > div > .MuiButtonBase-root').click({ force: true })
 
     })
 

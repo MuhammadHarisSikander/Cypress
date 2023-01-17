@@ -14,10 +14,12 @@ module.exports = defineConfig({
     },
     env: {
       allureReuseAfterSpec: true,
-      ensureScrollable: false
+      ensureScrollable: false,
     },
+    // experimentalSourceRewriting:true,
     viewportWidth: 1536,
     viewportHeight: 960
   },
+  // "chromeWebSecurity": false
 });
 
