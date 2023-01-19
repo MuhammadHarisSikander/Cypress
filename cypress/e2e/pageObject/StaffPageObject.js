@@ -81,12 +81,12 @@ class staffPageObject {
     this.getEmergencyTypeTxtElem().type("Relative");
     this.getCreateContainerBtnElem().focus();
     this.getCreateBtnElem().click();
-    cy.wait(5000);
+    cy.wait(2000);
   }
   async verifyReflection() {
     let text;
     this.getSearchTxtElem().type(data.staffName).type("{enter}");
-    cy.wait(2000);
+    cy.wait(1000);
     return new Promise((res, rej) => {
       cy.get(".MuiTableBody-root > .MuiTableRow-root > :nth-child(1)").then(
         ($val) => {
