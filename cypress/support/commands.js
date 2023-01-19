@@ -1,4 +1,5 @@
 import Login from '../e2e/pageObject/login'
+import creds from '../fixtures/creds.json'
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -27,12 +28,21 @@ import Login from '../e2e/pageObject/login'
 
 
 
-Cypress.Commands.add('Login', (username, password) => {
+Cypress.Commands.add('Login', (username, pass) => {
+    let email= username
+    let password = pass
 
+    if(email == undefined && pass == undefined){
+        email = creds.email
+        password = creds.password
+    }
     const login = new Login()
-    cy.visit('https://qa-backoffice.petplannersoftware.com');
-    login.getEmail().type(username)
+    cy.visit('/');
+    login.getEmail().type(email)
     login.getPassword().type(password)
     login.getSubmit().click()
 
 })
+
+
+
