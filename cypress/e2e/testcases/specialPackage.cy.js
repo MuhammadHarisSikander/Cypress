@@ -16,7 +16,7 @@ describe("Specal package",{
         const special = new Special()
         special.openReservation().click({force:true})
         special.getSpecialPackage().click({force:true})
-        cy.wait(8000)
+        cy.wait(10000)
         special.getCreateBtn().click({force:true})
         special.getPetOwner().click({force:true}).type('Elon musk')
         special.getSelectPet().click({force:true})

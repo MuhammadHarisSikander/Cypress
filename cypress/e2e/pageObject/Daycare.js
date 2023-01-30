@@ -8,7 +8,9 @@ class Daycare {
         return cy.contains('Day Care')
     }
     getDaycareCreateBtn() {
+        //*[@id="fuse-layout"]/div/div/div[2]/div/div[3]/div[2]/div[1]/div/button[2]/span[1]
         return cy.xpath('//*[@id="fuse-layout"]/div/div/div[2]/div/div[3]/div[2]/div[1]/div/button[2]/span[1]') 
+        //*[@id="fuse-layout"]/div/div/div[2]/div/div[3]/div[2]/div[1]/div/button[2]/span[1]
         // cy.get('.jss970 > div > :nth-child(2)')
         // MuiButton-label
     }

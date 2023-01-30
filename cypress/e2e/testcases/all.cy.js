@@ -1,0 +1,6 @@
+import './login.cy'
+import './petCreation.cy'
+import './DaycareReservation.cy'
+import './boardingReservation.cy'
+import './specialPackage.cy'
+import './waterPark.cy'

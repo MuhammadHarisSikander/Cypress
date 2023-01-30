@@ -16,6 +16,7 @@ describe("Create a pet", () => {
         const PetCreate = new petCreate()
         cy.wait(1000)
         PetCreate.getPetScreen().click()
+        cy.wait(9000)
         PetCreate.getPetCreateBtn().click()
         cy.wait(1000)
         PetCreate.getPoNames().click().type('Haris sikk Sikander').click()
@@ -23,13 +24,15 @@ describe("Create a pet", () => {
         cy.get('#combo-box-demo-popup').click()
         PetCreate.getPetType().click()
         cy.get('.MuiList-root').click()
-        if(cy.get(':nth-child(4) > :nth-child(2) > .jss996')){
-            cy.get(':nth-child(4) > :nth-child(2) > .jss996').click({force:true}).type('Cypress')
-        }else{
-            cy.get(':nth-child(4) > :nth-child(2) > .jss940').click({force:true}).type('Cypress')
-        }
+        cy.xpath('//*[@id="fuse-layout"]/div/div/div[2]/div/div[3]/div[2]/div[2]/div/form/div[2]/div[3]/div/input').type('Cypress')
+        // if(cy.get(':nth-child(4) > :nth-child(2) > .jss996')){
+        //     cy.get(':nth-child(4) > :nth-child(2) > .jss996').click({force:true}).type('Cypress')
+        // }else{
+        //     cy.get(':nth-child(4) > :nth-child(2) > .jss940').click({force:true}).type('Cypress')
+        // }
         // PetCreate.getPetBreed().click({force:true}).type('Cypress')
-        PetCreate.getPetName().type('Cypress Tester Dog')
+        cy.xpath('//*[@id="fuse-layout"]/div/div/div[2]/div/div[3]/div[2]/div[2]/div/form/div[2]/div[4]/div/input').type('Cypress Tester Dog')
+        // PetCreate.getPetName().type('Cypress Tester Dog')
         // PetCreate.getPetDOB().click()
         // PetCreate.getPetYear().click()
         // cy.get('.MuiPickersYearSelection-container > :nth-child(122)').click()
@@ -44,7 +47,8 @@ describe("Create a pet", () => {
         // })
         PetCreate.getPetGender().click()
         PetCreate.getGenderSelect().click()
-        PetCreate.getPetWeight().type('200')
+        cy.xpath('//*[@id="fuse-layout"]/div/div/div[2]/div/div[3]/div[2]/div[2]/div/form/div[2]/div[7]/div/input').type('200')
+        // PetCreate.getPetWeight().type('200')
         PetCreate.getPetColor().contains('Multi').click()
         PetCreate.getOpenColorList().click()
         cy.get('.MuiList-root > [tabindex="0"]').click()
@@ -55,6 +59,7 @@ describe("Create a pet", () => {
 
         //contact info
         PetCreate.getPetContactName().clear().type('Cypress Test')
+        
         PetCreate.getPetContactNum().clear().type('03311280612')
         PetCreate.getPetContactMail().clear().type('cypress@yopmail.com')
         PetCreate.getPetVetName().clear().type('Cypress Vet')
@@ -124,11 +129,12 @@ describe("Create a pet", () => {
         cy.get(':nth-child(14) > .MuiButtonBase-root').selectFile('cypress/img/dog.jpg')
         cy.wait(1000)
         cy.get('[style="display: flex; justify-content: end;"] > div > .MuiButtonBase-root').click()
+        cy.wait(5000)
         cy.get(':nth-child(1) > :nth-child(3) > :nth-child(2) > .MuiFormControl-root > .MuiInputBase-root').type("Please give some food")
         cy.get('[style="display: flex; justify-content: end;"] > div > .MuiButtonBase-root').click()
         cy.wait(2000)
         cy.get('.MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('Cypress Dog {enter}')
-        cy.get(':nth-child(1) > .MuiTableCell-alignCenter').should('contain.text', 'Cypress Dog')
+        cy.get(':nth-child(2) > .MuiTableCell-alignCenter').should('contain.text', 'Cypress Dog')
         cy.get('.jss704 > .ps__rail-y > .ps__thumb-y').scrollTo('top',{ensureScrollable: false})
         cy.get('.jss704 > .ps__rail-y').scrollIntoView({ offset: { top: 150, left: 0 } })
         // cy.get('[style="display: flex; justify-content: end;"] > div > .MuiButtonBase-root').click({ force: true })
