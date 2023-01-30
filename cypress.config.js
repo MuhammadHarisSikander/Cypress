@@ -16,6 +16,7 @@ module.exports = defineConfig({
       allureReuseAfterSpec: true,
       ensureScrollable: false,
     },
+    baseUrl: 'https://qa-backoffice.petplannersoftware.com',
     // experimentalSourceRewriting:true,
     viewportWidth: 1536,
     viewportHeight: 960
