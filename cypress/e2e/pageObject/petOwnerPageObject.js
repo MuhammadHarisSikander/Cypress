@@ -45,7 +45,7 @@ class petOwnerPageObject {
     return cy.get(".MuiDialogActions-root > :nth-child(2) > .MuiButton-label");
   }
   getSearchTxtElem() {
-    return cy.get('.jss963 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input')
+    return cy.xpath('//*[@id="fuse-layout"]/div/div/div[2]/div/div[3]/div/div[2]/div[1]/div/input')
   }
   getFirstRowElem() {
     return cy.get(".MuiTableBody-root > :nth-child(1) > :nth-child(2)");
