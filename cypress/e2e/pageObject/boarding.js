@@ -15,8 +15,11 @@ class Boarding {
     getSelectPetOwner(){
         return cy.get('#combo-box-demo-option-0')
     }
+    getFocusArrivedDate(){
+        return cy.xpath('//*[@id="date"]')
+    }
     getArrivedDate(){
-        return cy.get('.jss999 > .MuiFormControl-root > .MuiInputBase-root > #date')
+        return cy.get('.jss989 > .MuiFormControl-root > .MuiInputBase-root > #date')
     }
     getDepartureDate(){
         return cy.get('.jss1000 > .MuiFormControl-root > .MuiInputBase-root > #date')

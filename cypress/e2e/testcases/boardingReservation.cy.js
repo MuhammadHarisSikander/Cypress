@@ -1,5 +1,6 @@
 /// <reference types="Cypress" />
 const dayjs = require('dayjs')
+// import { first } from 'cypress/types/lodash'
 import Boarding from '../pageObject/boarding'
 
 describe("Boarding", {
@@ -18,12 +19,15 @@ describe("Boarding", {
         cy.wait(2000)
         boarding.getCreateBoarding().click({force:true})
         boarding.getPetOwner().click({force:true}).type("Elon musk")
-        cy.wait(5000)
+        cy.wait(1000)
         boarding.getSelectPetOwner().click({force:true})
+        boarding.getFocusArrivedDate().first().focus({force:true})
         boarding.getArrivedDate().type(dayjs().format('YYYY-MM-DDT11:00'))
-        boarding.getDepartureDate().type(dayjs().add(1,'day').format('YYYY-MM-DDT14:00'))
+        boarding.getFocusArrivedDate().eq(1).focus({force:true}).type(dayjs().add(1,'day').format('YYYY-MM-DDT14:00'))
+        // boarding.getDepartureDate()
         boarding.getSearchPet().click({force:true}).type('E dog')
         boarding.getPetSelect().click({force:true})
+        cy.xpath('//*[@id="fuse-layout"]/div/div/div[2]/div/div[2]/div/div[2]').focus({force:true})
         boarding.getSelectRoom().click({force:true})
         // boarding.getRoomOne().click({force:true})
         // boarding.getRoomTwo().click({force:true})
@@ -52,7 +56,7 @@ describe("Boarding", {
         // })
         // cy.get('table tr td').filter('not.have.css','not-allowed').click({force:true,multiple:true})
         // cy.get('table tr td').should('be.enabled')
-        cy.wait(2000)
+        // cy.wait(2000)
         // cy.get('table tr').each(($elem,$index) => {
         //     $elem.css("background-color","rgb(215, 215, 215)").trigger()
 
@@ -64,13 +68,13 @@ describe("Boarding", {
         // });
 
 
-        cy.get('.MuiDialogContent-root').each(($elem,$index) => {
-            // console.log("Harisssss>>>",$elem[0].click()); 
-            if($index == 3){
-             return false;
-            }
-            cy.wrap($elem).click()
-         });
+        // cy.get('.MuiDialogContent-root').each(($elem,$index) => {
+        //     // console.log("Harisssss>>>",$elem[0].click()); 
+        //     if($index == 3){
+        //      return false;
+        //     }
+        //     cy.wrap($elem).click()
+        //  });
         //  cy.get('table tr td').should('have.css','pointer').click({force:true}).should('have.css','rgb(215, 215, 215)')
         // cy.get('.MuiDialogContent-root').each(($elem,$index) => {
         //     // console.log("Harisssss>>>",$elem[0].click()); 
