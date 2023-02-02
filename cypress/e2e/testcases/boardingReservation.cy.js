@@ -68,7 +68,6 @@ describe("Boarding",
         console.log(className, "Harisssss");
         expect(className).to.match(/Reservation Cancelled/)
       })
-      // cy.get('.jss965 > .MuiInputBase-root > .MuiInputBase-input').clear().type('Elon Musk').type('{enter}')
     })
 
 

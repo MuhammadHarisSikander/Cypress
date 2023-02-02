@@ -132,8 +132,6 @@ describe('Grooming admin', () => {
       })
     })
 
-
-
   it('Check-out Groomer reservation',
     //  {
     //     retries: {
