@@ -21,6 +21,6 @@ module.exports = defineConfig({
     viewportWidth: 1536,
     viewportHeight: 960
   },
-  // "chromeWebSecurity": false
+  "chromeWebSecurity": false
 });
 

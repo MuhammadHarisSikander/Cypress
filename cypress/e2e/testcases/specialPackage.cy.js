@@ -17,7 +17,8 @@ describe("Specal package",{
         special.openReservation().click({force:true})
         special.getSpecialPackage().click({force:true})
         cy.wait(10000)
-        special.getCreateBtn().click({force:true})
+        // special.getCreateBtn().click({force:true})
+        cy.get('button').contains('Create Grooming').first().click()
         special.getPetOwner().click({force:true}).type('Elon musk')
         special.getSelectPet().click({force:true})
         special.getNextCta().click({force:true})
@@ -30,7 +31,7 @@ describe("Specal package",{
         special.getFinishBtn().click({force:true})
     })
 
-    it('Cancel Secial Package reservation',()=>{
+    it('Cancel special Package reservation',()=>{
         const special = new Special()
         special.openReservation().click({force:true})
         special.getSpecialPackage().click({force:true})
@@ -45,7 +46,8 @@ describe("Specal package",{
         special.openReservation().click({force:true})
         special.getSpecialPackage().click({force:true})
         cy.wait(5000)
-        special.getCreateBtn().click({force:true})
+        // special.getCreateBtn().click({force:true})
+        cy.get('button').contains('Create Grooming').first().click()
         special.getPetOwner().click({force:true}).type('Elon musk')
         special.getSelectPet().click({force:true})
         special.getNextCta().click({force:true})
